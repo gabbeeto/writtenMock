@@ -1,0 +1,293 @@
+/* ================================================================
+   RESET & BASE
+   ================================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #f8fafc;
+    color: #0b1a2e;
+    line-height: 1.6;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-width: 290px;          /* mobile‑first */
+}
+
+/* ================================================================
+   TYPOGRAPHY
+   ================================================================ */
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #0a1a2b;
+    border-bottom: 4px solid #2563eb;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0f2b44;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+    border-left: 5px solid #2563eb;
+    padding-left: 0.75rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1a3a5c;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 0.75rem;
+}
+
+cite {
+    color: #1d4ed8;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #2563eb33, #2563eb, #2563eb33);
+    margin: 2rem 0;
+}
+
+/* ================================================================
+   LISTS
+   ================================================================ */
+ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+ul ul, ol ul {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+/* ================================================================
+   TABLES – scrollable on small screens
+   ================================================================ */
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+}
+
+table {
+    width: 100%;
+    min-width: 400px;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    background: #ffffff;
+}
+
+th, td {
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e9edf2;
+    vertical-align: top;
+}
+
+th {
+    background: #f1f5f9;
+    font-weight: 600;
+    color: #0b2a44;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+/* ================================================================
+   INLINE HIGHLIGHTS
+   ================================================================ */
+strong {
+    color: #0b2a44;
+}
+
+em {
+    font-style: italic;
+    color: #1e4a7a;
+}
+
+del {
+    color: #b91c1c;
+}
+
+/* ================================================================
+   CARD‑LIKE SECTIONS
+   ================================================================ */
+h2 ~ p,
+h2 ~ ul,
+h2 ~ ol,
+h2 ~ div,
+h2 ~ table,
+h3 ~ p,
+h3 ~ ul,
+h3 ~ ol,
+h3 ~ div,
+h3 ~ table {
+    background: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    border: 1px solid #eef2f6;
+}
+
+/* reset inner lists to avoid double padding */
+ul, ol {
+    background: transparent !important;
+    padding: 0 0 0 1.5rem !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+/* table wrapper already has its own border */
+.table-wrapper {
+    background: #ffffff;
+    padding: 0 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+footer {
+    margin-top: 2.5rem;
+    padding: 1.25rem 1rem;
+    background: #eef2f6;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #1e3a5f;
+    border: 1px solid #dce2ea;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* ================================================================
+   RESPONSIVE – MOBILE FIRST (base = 290px)
+   ================================================================ */
+
+/* small tablets & large phones (≥480px) */
+@media (min-width: 480px) {
+    body {
+        padding: 1.5rem 2rem;
+    }
+    h1 {
+        font-size: 2.1rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 1.25rem;
+    }
+    th, td {
+        padding: 0.7rem 1rem;
+    }
+}
+
+/* tablets & small desktops (≥768px) */
+@media (min-width: 768px) {
+    body {
+        padding: 2rem 2.5rem;
+    }
+    h1 {
+        font-size: 2.4rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+        padding-left: 1rem;
+    }
+    h3 {
+        font-size: 1.35rem;
+    }
+    table {
+        font-size: 1rem;
+    }
+    th, td {
+        padding: 0.8rem 1.25rem;
+    }
+    h2 ~ p, h2 ~ ul, h2 ~ ol, h2 ~ div, h2 ~ table,
+    h3 ~ p, h3 ~ ul, h3 ~ ol, h3 ~ div, h3 ~ table {
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* large desktops (≥1024px) */
+@media (min-width: 1024px) {
+    body {
+        padding: 2.5rem 3rem;
+    }
+    h1 {
+        font-size: 2.6rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.45rem;
+    }
+    .table-wrapper {
+        border-radius: 10px;
+    }
+    th, td {
+        padding: 0.9rem 1.5rem;
+    }
+    footer {
+        padding: 1.5rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* ================================================================
+   PRINT
+   ================================================================ */
+@media print {
+    body {
+        background: #ffffff;
+        padding: 0.5in;
+        font-size: 11pt;
+        line-height: 1.4;
+        color: #000000;
+    }
+    h1, h2, h3 {
+        color: #000000;
+    }
+    .table-wrapper {
+        border: 1px solid #aaa;
+    }
+    th {
+        background: #eee;
+    }
+    footer {
+        background: #f4f4f4;
+        border: 1px solid #ccc;
+    }
+}
