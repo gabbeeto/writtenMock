@@ -291,3 +291,15 @@ footer p {
         border: 1px solid #ccc;
     }
 }
+
+img{
+width: 84vw;
+height: 44vw;
+}
+
+/* vertically & horizontally center rowspan cells */
+th[rowspan],
+td[rowspan] {
+    vertical-align: middle;
+    text-align: center;
+}
